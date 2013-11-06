@@ -12,7 +12,8 @@
         padding-right: 10px;
         font-family: 'Nanum Gothic', 'Malgun Gothic', 'Dotum', 'sans-serif';
       }
-      div {
+      div.wrapper {
+        position: relative;
         width: 600px;
       }
       .center {
@@ -23,26 +24,29 @@
     </style>
   </head>
   <body>
-    <h1><big>보노보노 시계</big></h1>
-    <p><small>연준이형이 기초군사훈련을 씩씩하게 또 <b>무엇보다 안전하게</b> 마치시길 기원합니다. —AiOO</small></p>
-    <div id="background" class="center" style="position: relative; height:224px; background: url('./for_yj.png');">
-      <span id="remain" style="position: absolute; bottom: 25px; right: 280px; font-size: 26pt; font-weight: bold; color: #000000;">00:00:00:00:000</span>
-    </div>
-    <p>응원의 댓글을 남겨주세요!</p>
-    <div class="fb-comments" data-href="http://lkn.kr/bonobono/1" data-numposts="20" data-width="600"></div>
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/ko_KR/all.js#xfbml=1&appId=463029213816081";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-    <div class="center">
-      <div style="text-align: center;">
-        <embed src="http://player.bgmstore.net/U2A02" allowscriptaccess="always" allowfullscreen="true" width="300" height="100"></embed>
+    <div class="wrapper center">
+      <h1><big>보노보노 시계</big></h1>
+      <p><small>연준이형이 기초군사훈련을 씩씩하게 또 <b>무엇보다 안전하게</b> 마치시길 기원합니다. —AiOO</small></p>
+      <div id="background" style="position: relative; height:224px; background: url('./for_yj.png');">
+        <span id="remain" style="position: absolute; bottom: 25px; right: 280px; font-size: 26pt; font-weight: bold; color: #000000;">00:00:00:00:000</span>
+        <a href="https://github.com/AiOO/bonobono-clock"><img style="position: absolute; top: 0; right: 0; border: 0; width: 120px; height: 120px;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
       </div>
-      <small><a href="http://bgmstore.net/view/U2A02" target="_blank">BGM정보 : 브금저장소 - http://bgmstore.net/view/U2A02</a></small>
+      <p>응원의 댓글을 남겨주세요!</p>
+      <div class="fb-comments" data-href="http://lkn.kr/bonobono/1" data-numposts="20" data-width="600"></div>
+      <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/ko_KR/all.js#xfbml=1&appId=463029213816081";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+      <div class="center">
+        <div style="text-align: center;">
+          <embed src="http://player.bgmstore.net/U2A02" allowscriptaccess="always" allowfullscreen="true" width="300" height="100"></embed>
+        </div>
+        <small><a href="http://bgmstore.net/view/U2A02" target="_blank">BGM정보 : 브금저장소 - http://bgmstore.net/view/U2A02</a></small>
+      </div>
     </div>
     <script type="text/javascript">
     <!--
