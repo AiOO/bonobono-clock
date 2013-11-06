@@ -49,10 +49,19 @@
       var remain = document.getElementById('remain')
       var destDate = new Date(2013, 10, 7, 14, 0, 0)
       var destDateMilliseconds = destDate.getTime()
+      var zeroFlag;
 
       function n(num, len) {
           if(num.toString().length < len) return n('0'+num.toString(), len);
           else return num;
+      }
+
+      function m(str) {
+          if(zeroFlag && str == '00') return '';
+          else {
+              zeroFlag = false;
+              return str+':'
+          }
       }
 
       function run() {
@@ -62,12 +71,13 @@
           var d = destDateMilliseconds - nowDateMilliseconds;
           if(d < 0) d = 0;
 
-          var dDays = Math.floor(d / 86400000)
-          var dHours = Math.floor((d % 86400000) / 3600000)
-          var dMinutes = Math.floor((d % 3600000) / 60000)
-          var dSeconds = Math.floor((d % 60000) / 1000)
-          var dMilliseconds = d % 1000;
-          remain.innerHTML = n(dDays, 2)+":"+n(dHours, 2)+":"+n(dMinutes, 2)+":"+n(dSeconds, 2)+":"+n(dMilliseconds, 3);
+          zeroFlag = true;
+          var dDays = m(n(Math.floor(d / 86400000), 2))
+          var dHours = m(n(Math.floor((d % 86400000) / 3600000), 2))
+          var dMinutes = m(n(Math.floor((d % 3600000) / 60000), 2))
+          var dSeconds = m(n(Math.floor((d % 60000) / 1000), 2))
+          var dMilliseconds = n(d % 1000, 3);
+          remain.innerHTML = dDays+dHours+dMinutes+dSeconds+dMilliseconds;
       }
 
       setInterval('run()', 1);
